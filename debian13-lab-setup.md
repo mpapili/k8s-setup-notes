@@ -224,6 +224,16 @@ worker-2          Ready    <none>          13m   v1.34.1
 
 ---
 
+## Fixing br_netfilter and sysctls on debian13
+
+out the box I needed to enable br_netfilter module and do one extra
+configuration for sysctl (enabling bridge-nf-call-iptables)
+
+this script can be found in this repo. Run it for debian13 otherwise
+on reboot your coredns and flannel pods will be dead
+
+---
+
 ## 📌 Notes
 
 - **Security**: In production, use secure tokens and certificates.
